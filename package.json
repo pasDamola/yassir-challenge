@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "npx ts-node src/index.ts",
+    "start": "npx ts-node src/app.ts",
     "test": "jest",
     "test:watch": "jest --watch"
   },
