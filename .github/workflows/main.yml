@@ -33,10 +33,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run npm build
-        run: npm run build
-        env:
-          DOTENV_KEY: ${{ secrets.DOTENV_KEY }}
-
       - name: Run test
         run: npm test
+        env:
+          DOTENV_KEY: ${{ secrets.DOTENV_KEY }}
