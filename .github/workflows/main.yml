@@ -35,3 +35,7 @@ jobs:
 
       - name: Run test
         run: npm test
+
+      - name: Deploy
+      run: |
+        echo "Using API Key: $IQAIR_API_KEY"
