@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npx ts-node src/app.ts",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "build": "npx ts-node src/app.ts"
   },
   "repository": {
     "type": "git",

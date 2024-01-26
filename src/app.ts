@@ -12,6 +12,8 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(logger);
 
+console.log(`Hello ${process.env.IQAIR_API_KEY}`);
+
 // Routes
 app.use("/api", airQualityRoutes);
 
