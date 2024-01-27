@@ -1,6 +1,3 @@
-import dotenv from "dotenv";
-dotenv.config();
-
 import { Request, Response } from "express";
 import { getAirQualityController } from "../../controllers/airQualityController";
 import { getAirQuality } from "../../services/iqairService";

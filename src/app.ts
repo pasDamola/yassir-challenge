@@ -3,8 +3,10 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import airQualityRoutes from "./routes/airQualityRoutes";
+
 import { errorHandler } from "./middlewares/errorHandler";
 import { logger } from "./middlewares/logger";
+import { airQualityCron } from "./cronJob/airQualiityCronJob";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,6 +16,8 @@ app.use(logger);
 
 // Routes
 app.use("/api", airQualityRoutes);
+
+airQualityCron.start();
 
 app.use(errorHandler);
 

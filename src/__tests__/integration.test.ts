@@ -46,8 +46,10 @@ describe("Integration Tests", () => {
   });
 
   afterAll(() => {
-    server.close(() => {});
+    // Closing server allows Jest to exit successfully.
+    server.close();
   });
+
   it("GET /api/air-quality should return air quality for given coordinates", async () => {
     const response = await request(app).get("/api/air-quality").query({
       latitude: 9.0563,
