@@ -1,3 +1,4 @@
+import { connectToDatabase } from "./database/setup";
 import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
@@ -17,9 +18,14 @@ app.use(logger);
 // Routes
 app.use("/api", airQualityRoutes);
 
+// Start cron job
 airQualityCron.start();
 
 app.use(errorHandler);
+
+connectToDatabase().then(() => {
+  console.log("Database connected");
+});
 
 export const server = app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

@@ -1,4 +1,5 @@
 import { schedule } from "node-cron";
+import { insertAirQualityData } from "../services/airQualityService";
 import { getAirQuality } from "../services/iqairService";
 
 export const fetchAirQualityCronJob = async () => {
@@ -10,8 +11,7 @@ export const fetchAirQualityCronJob = async () => {
     const longitude = PARIS_LONGITUDE;
 
     const airQuality = await getAirQuality(latitude, longitude);
-
-    // Do something with the air quality data, e.g., store it in a database
+    await insertAirQualityData(airQuality);
     console.log(airQuality); // Temporary logging for demonstration
   } catch (error) {
     console.error(error);

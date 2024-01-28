@@ -10,7 +10,7 @@
     "outDir": "./dist",
     "types": ["jest"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/database/setup.ts"],
   "exclude": ["node_modules"],
   "jest": {
     "preset": "ts-jest"
