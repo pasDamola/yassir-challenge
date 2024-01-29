@@ -38,3 +38,7 @@ jobs:
         run: npm test
         env:
           DOTENV_KEY: ${{ secrets.DOTENV_KEY }}
+
+      - name: Print MongoDB Connection String
+        run: echo "Connection String: ${{ secrets.MONGO_URI }}"
+
