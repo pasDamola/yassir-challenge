@@ -7,6 +7,6 @@ import {
 const router = express.Router();
 
 router.get("/air-quality", getAirQualityController);
-router.get("/most-polluted-time", getMostPollutedTimeController);
+router.get("/paris-most-polluted-time", getMostPollutedTimeController);
 
 export default router;
