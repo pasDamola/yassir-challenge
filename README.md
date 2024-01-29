@@ -9,7 +9,6 @@ This project is a Node.js REST API that provides air quality information for the
 - [Configuration](#configuration)
 - [Endpoints](#endpoints)
 - [Getting Started](#getting-started)
-  )
 
 ## Configuration
 
@@ -17,7 +16,7 @@ This project is a Node.js REST API that provides air quality information for the
 
 ## Endpoints
 
-- `/api/air-quality`: Get air quality information for a specific location.
+- `/api/air-quality?latitude={LATITUDE}&longitude={LONGITUDE}`: Get air quality information for a specific location.
 - `/api/most-polluted-time`: Get the date and time when the Paris zone is most polluted.
 
 ## Getting Started
