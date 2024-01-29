@@ -1,5 +1,6 @@
 import request from "supertest";
 import app, { server } from "../app";
+import { closeDatabase } from "../database/setup";
 
 jest.mock("../services/iqairService", () => ({
   getAirQuality: jest.fn(),
@@ -45,9 +46,10 @@ describe("Integration Tests", () => {
     jest.restoreAllMocks();
   });
 
-  afterAll(() => {
+  afterAll(async () => {
     // Closing server allows Jest to exit successfully.
     server.close();
+    await closeDatabase();
   });
 
   it("GET /api/air-quality should return air quality for given coordinates", async () => {
