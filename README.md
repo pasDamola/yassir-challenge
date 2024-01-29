@@ -37,8 +37,10 @@ This project is a Node.js REST API that provides air quality information for the
 3. Set up environment variables:
    Create a .env file, add your IQAir API key and mongo connection:
 
+   ```bash
    IQAIR_API_KEY=your-iqair-api-key
    MONGO_URI=your-mongo-uri
+   ```
 
 4. Run the API:
 
